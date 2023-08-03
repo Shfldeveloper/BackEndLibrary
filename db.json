@@ -1,0 +1,100 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Amin Saeedi",
+            "username": "01010101",
+            "email": "test@gmail.com",
+            "crime": 0,
+            "role": "ADMIN"
+        },
+        {
+            "id": 2,
+            "name": "Qadir Yolme",
+            "username": "Q_Yolme",
+            "email": "test@gmail.com",
+            "crime": 22558877,
+            "role": "ADMIN"
+        },
+        {
+            "id": 3,
+            "name": "Ehsan Mmdi",
+            "username": "ehs",
+            "email": "test@gmail.com",
+            "crime": 0,
+            "role": "ADMIN"
+        },
+        {
+            "id": "aadac4a6-939f-4cf8-86a8-302af647050a",
+            "name": "zohre",
+            "username": "love8pink",
+            "email": "love8pink@gmail.com",
+            "crime": 0,
+            "role": "USER"
+        },
+        {
+            "id": "1ff34367-f117-4002-868d-8d80756d9781",
+            "name": "fateme",
+            "username": "shhhhhhhhh",
+            "email": "mahdiehfatemeh@gmail.com",
+            "crime": 0,
+            "role": "USER"
+        }
+    ],
+    "books": [
+        {
+            "id": 1,
+            "title": "Golestan",
+            "author": "Sadi",
+            "price": 230000,
+            "free": 0
+        },
+        {
+            "id": 2,
+            "title": "Boostan",
+            "author": "Sadi",
+            "price": 400000,
+            "free": 1
+        },
+        {
+            "id": 3,
+            "title": "scythe",
+            "author": "unknown",
+            "price": 450000,
+            "free": 1
+        },
+        {
+            "id": 4,
+            "title": "HAARY POTTER",
+            "author": "JK rouling",
+            "price": 2202020,
+            "free": 0
+        },
+        {
+            "id": "0762b322-c349-48bc-8ea3-d669a1ec9151",
+            "title": "atomic Habits",
+            "outher": "i dont remember",
+            "price": 25000,
+            "free": 1
+        },
+        {
+            "id": "b907e96c-9be0-40fd-9a4a-df70cac715da",
+            "title": "Fable Haven",
+            "outher": "Brandon mull",
+            "price": 275000,
+            "free": 1
+        }
+    ],
+    "rents": [
+        {
+            "id": "2f8ce120-79d7-4866-bdce-ec62f421e2f7",
+            "userID": "9c4f057d-26f4-44d7-9ab4-ba3e38fce8e5",
+            "bookID": 3
+        },
+        {
+            "id": "3cfaf13a-837b-423a-b559-5608b1742b41",
+            "userID": "9c4f057d-26f4-44d7-9ab4-ba3e38fce8e5",
+            "bookID": 4
+        }
+    ]
+}
