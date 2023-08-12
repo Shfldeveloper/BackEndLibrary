@@ -20,14 +20,16 @@ const creatNewUser = async (req,res)=>{
         const newUserInfo = JSON.parse(reqBody)
         const {name , username , email} = newUserInfo
         if(name === "",username === "", email === ""){
-            res.writeHead(422,{"Content-Type":"application/json"})
-            res.write(JSON.stringify({message:"the req was uncomplited"}))
-            res.end()
+            res.status(422).send({message:"the req was uncomplited"})
+            // res.writeHead(422,{"Content-Type":"application/json"})
+            // res.write(JSON.stringify({message:"the req was uncomplited"}))
+            // res.end()
         }else{
             const postingNewUserResult = await UserModel.addNewUser(newUserInfo)
-            res.writeHead(201,{"Content-Type":"application/json"})
-            res.write(JSON.stringify(postingNewUserResult))
-            res.end()
+            res.status(201).send(postingNewUserResult)
+            // res.writeHead(201,{"Content-Type":"application/json"})
+            // res.write(JSON.stringify(postingNewUserResult))
+            // res.end()
             
         }
     })
