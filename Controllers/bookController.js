@@ -29,9 +29,10 @@ const postBook = async (req,res) =>{
             free : 1
         }
         const postingBookResult =await BookModel.addBook(newBook)
-        res.writeHead(201,{"Content-Type":"application/json"})
-        res.write(JSON.stringify(postingBookResult))
-        res.end()
+        res.status(201).send(postingBookResult)
+        // res.writeHead(201,{"Content-Type":"application/json"})
+        // res.write(JSON.stringify(postingBookResult))
+        // res.end()
     })
 }
 const updateBook = async (req,res)=>{
