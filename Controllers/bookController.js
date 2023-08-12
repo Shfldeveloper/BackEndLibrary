@@ -36,7 +36,8 @@ const postBook = async (req,res) =>{
     })
 }
 const updateBook = async (req,res)=>{
-    const booId = url.parse(req.url,true).query.id
+    // const booId = url.parse(req.url,true).query.id
+    const booId = req.params.id
     let reqBody = ''
     req.on("data",(data)=>{
         reqBody += data.toString()
@@ -44,9 +45,10 @@ const updateBook = async (req,res)=>{
     req.on("end", async ()=>{
         const bookNewInfo = JSON.parse(reqBody)
         const updateBookRes = await BookModel.updateOneBook(booId,bookNewInfo)
-        res.writeHead(200,{"Content-Type":"application/json"})
-        res.write(JSON.stringify(updateBookRes))
-        res.end()
+        res.send(updateBookRes)
+        // res.writeHead(200,{"Content-Type":"application/json"})
+        // res.write(JSON.stringify(updateBookRes))
+        // res.end()
     })
 
 }
