@@ -46,7 +46,8 @@ const upgradeUser = async (req,res)=>{
 }
 
 const setCrime = async (req,res)=>{
-    const userId = url.parse(req.url,true).query.id
+    // const userId = url.parse(req.url,true).query.id
+    const userId = req.params.id
     let reqBody = ''
     req.on('data',(data)=>{
         reqBody += data.toString()
@@ -54,9 +55,10 @@ const setCrime = async (req,res)=>{
     req.on('end',async()=>{
         const {crime} = JSON.parse(reqBody)
         const setUserCrimeRes = await UserModel.serUserCrime(userId,crime)
-        res.writeHead(200 , {"Content-Type":"application/json"})
-        res.write(JSON.stringify(setUserCrimeRes))
-        res.end()
+        res.send(setUserCrimeRes)
+        // res.writeHead(200 , {"Content-Type":"application/json"})
+        // res.write(JSON.stringify(setUserCrimeRes))
+        // res.end()
     })
 }
 

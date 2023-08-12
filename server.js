@@ -160,6 +160,9 @@ app.post("/api/users",(req,res)=>{
 app.put("/api/users/upgrade/:id",(req,res)=>{
     userController.upgradeUser(req,res)
 })
+app.put("/api/users/:id",(req,res)=>{
+    userController.setCrime(req,res)
+})
 app.listen(process.env.PORT,()=>{
     console.log(`running on port ${process.env.PORT}`);
 })
