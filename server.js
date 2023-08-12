@@ -142,6 +142,9 @@ app.get("/api/users",(req,res)=>{
 app.get("/api/books",(req,res)=>{
     bookController.getAll(req,res)
 })
+app.delete("/api/books/:id",(req,res)=>{
+    bookController.deleteOne(req,res)
+})
 
 app.listen(process.env.PORT,()=>{
     console.log(`running on port ${process.env.PORT}`);

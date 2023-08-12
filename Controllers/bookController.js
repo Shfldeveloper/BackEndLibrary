@@ -10,12 +10,13 @@ const getAll = async (req,res)=>{
 }
 
 const deleteOne = async (req,res) =>{
-    const parsedUrl = url.parse(req.url,true)
-    const bookId = parsedUrl.query.id
-    const resMessage = await BookModel.remove(bookId)
-    res.writeHead(200,{"Content-Type":"application/json"})
-    res.write(JSON.stringify(resMessage))
-    res.end()
+    // const parsedUrl = url.parse(req.url,true)
+    // const bookId = parsedUrl.query.id
+    const resMessage = await BookModel.remove(req.params.id)
+    // res.writeHead(200,{"Content-Type":"application/json"})
+    // res.write(JSON.stringify(resMessage))
+    // res.end()
+    res.send(resMessage)
 }
 const postBook = async (req,res) =>{
     let book = ''
