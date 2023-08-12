@@ -136,6 +136,9 @@ require("dotenv").config()
 const express = require("express")
 
 const app = express()  //server
+app.get("/api/users",(req,res)=>{
+    userController.getAll(req,res)
+})
 
 app.listen(process.env.PORT,()=>{
     console.log(`running on port ${process.env.PORT}`);

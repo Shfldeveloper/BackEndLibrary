@@ -1,12 +1,14 @@
 const url = require("url")
+const express = require("express")
 const UserModel = require("./../Models/User")
 
 const getAll = async (req,res)=>{
     const users = await UserModel.find()
 
-    res.writeHead(200,{"Content-Type" : "application/json"})
-    res.write(JSON.stringify(users))
-    res.end()
+    // res.writeHead(200,{"Content-Type" : "application/json"})
+    // res.write(JSON.stringify(users))
+    // res.end()
+    res.send(users)
 }
 
 const creatNewUser = async (req,res)=>{
