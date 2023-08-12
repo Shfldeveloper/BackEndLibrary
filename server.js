@@ -148,7 +148,9 @@ app.delete("/api/books/:id",(req,res)=>{
 app.post("/api/books",(req,res)=>{
     bookController.postBook(req,res)
 })
-
+app.put("/api/books/back/:id",(req,res)=>{
+    rentController.restoreBook(req,res)
+})
 app.listen(process.env.PORT,()=>{
     console.log(`running on port ${process.env.PORT}`);
 })
