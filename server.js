@@ -157,6 +157,9 @@ app.put("/api/books/:id",(req,res)=>{
 app.post("/api/users",(req,res)=>{
     userController.creatNewUser(req,res)
 })
+app.put("/api/users/upgrade/:id",(req,res)=>{
+    userController.upgradeUser(req,res)
+})
 app.listen(process.env.PORT,()=>{
     console.log(`running on port ${process.env.PORT}`);
 })

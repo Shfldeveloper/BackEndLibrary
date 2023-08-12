@@ -36,11 +36,13 @@ const creatNewUser = async (req,res)=>{
 }
 
 const upgradeUser = async (req,res)=>{
-    const userId = url.parse(req.url,true).query.id
+    // const userId = url.parse(req.url,true).query.id
+    const userId = req.params.id
     const updateRes = await UserModel.upgradeUserRole(userId)
-    res.writeHead(200,{"Content-Type":"application/json"})
-    res.write(JSON.stringify(updateRes))
-    res.end()
+    res.send(updateRes)
+    // res.writeHead(200,{"Content-Type":"application/json"})
+    // res.write(JSON.stringify(updateRes))
+    // res.end()
 }
 
 const setCrime = async (req,res)=>{
